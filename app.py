@@ -12,13 +12,13 @@ app = Flask(__name__)
 def jobformm():
     form = JobForm()
     if form.validate_on_submit():
-        return redirect(url_for('success'))
-    return  render_template('index.html', form = form)
+        return render_template("success.html")
+    return  render_template("index.html", form = form)
 
 #we can also simply return render_template from the above view function 
-@app.route('/success')
-def success():
-    return render_template('success.html')
+#@app.route('/success')
+#def success():
+    #return render_template('success.html')
 
 if __name__ == '__main__':
     app.run()

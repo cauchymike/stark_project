@@ -15,9 +15,10 @@ def jobformm():
         return redirect(url_for('success'))
     return  render_template('index.html', form = form)
 
+#we can also simply return render_template from the above view function 
 @app.route('/success')
 def success():
-    return 'Application Received, We will contact you soon'
+    return render_template('success.html')
 
 if __name__ == '__main__':
     app.run()

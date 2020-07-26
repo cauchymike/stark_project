@@ -2,7 +2,7 @@ from flask import Flask, url_for, render_template, redirect
 from forms import JobForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'seunmelody'
+#app.config['SECRET_KEY'] = 'seunmelody'
 
 ##################################################################################
 #view section
@@ -20,7 +20,7 @@ def success():
     return 'Application Received, We will contact you soon'
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run()
 
 
 

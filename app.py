@@ -10,10 +10,7 @@ app.config['SECRET_KEY'] = 'seunmelody-is-my-secret-key'
 
 @app.route('/', methods = ('GET', 'POST'))
 def jobformm():
-    form = JobForm()
-    if form.validate_on_submit():
-        return redirect(url_for('success'))
-    return  render_template("index.html", form = form)
+    return  render_template("index.html")
 
 #we can also simply return render_template from the above view function 
 @app.route('/success')
